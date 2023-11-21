@@ -34,9 +34,6 @@ a {
     text-decoration: none;
 }
 
-
-
-
 /*
     HEADER
 */
@@ -61,8 +58,63 @@ header .menu-links  ul li{
 }
 
 /*
-    MAIN
+    MAIN - SECTION-1
 */
+
+#section-1 .table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section-1 .big-card {
+    width: calc((100% / 3) * 2);
+    display: flex;
+    align-items: center;
+}
+
+#section-1 .big-card > * {
+    width: calc(100% / 2);
+}
+
+#section-1 h4{
+    color: aqua;
+}
+
+
+#section-1 p {
+    color: lightslategray;
+}
+
+#section-1 .card {
+    width: calc((100% / 3) * 1);
+    text-align: center;
+}
+
+
+/*
+    MAIN - SECTION-2
+*/
+
+#section-2 .container {
+    display: flex;
+}
+
+#section-2 .card h3, 
+#section-2 .card p {
+    color: white;
+}
+
+#section-2 .end-card  {
+    min-height: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#section-2 .end-card div > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /*
     RESPONSIVE
@@ -93,8 +145,26 @@ header .menu-links  ul li{
     DEBUG
 */
 
-header {
+.debug header {
     background-color: blue;
     color: white;
 }
 
+.debug #section-1 .big-card,
+.debug #section-1 .card {
+    background-color: aquamarine;
+    border: 1px solid aquamarine;
+    border-radius: 40px;
+}
+
+
+.debug #section-2 {
+    background-color: blueviolet;
+    min-height: 300px;
+}
+
+.debug #section-2 .end-card > * {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 40px;
+}
