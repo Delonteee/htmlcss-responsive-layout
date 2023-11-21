@@ -17,8 +17,12 @@ html {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.row {
+    display: flex;
 }
 
 img {
@@ -29,3 +33,68 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+
+
+
+/*
+    HEADER
+*/
+
+header .row {
+    height: 80px;
+    justify-content: space-between;
+}
+
+header .container .row > * {
+    padding: 10px;
+    display: flex;  
+    align-items: center;
+}   
+
+header .menu-hamburger {
+    display: none;
+}
+
+header .menu-links  ul li{
+    display: inline;
+}
+
+/*
+    MAIN
+*/
+
+/*
+    RESPONSIVE
+*/
+
+
+@media screen and (max-width: 768px) {
+
+    header .menu-hamburger {
+        display: block;
+    }
+    header .menu-links {
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    
+}
+
+
+
+/*
+    DEBUG
+*/
+
+header {
+    background-color: blue;
+    color: white;
+}
+
