@@ -8,9 +8,23 @@
     box-sizing: border-box;
 }
 
+ul,ol{
+    list-style: none;
+}
+
 /*
     GENERAL
 */
+
+:root {
+    --main_header_color: #0084fd;
+    --main_padding: 20px;
+    --card_size: calc(100% / 3);
+    --main_margin_bottom: 1.5rem;
+    --button_padding: 8px 10px;
+    --main_color: #9792e4;
+}
+
 
 html {
     font-family: Arial, Helvetica, sans-serif;
@@ -19,6 +33,7 @@ html {
 .container {
     max-width: 1000px;
     margin: 0 auto;
+    padding: var(--main_padding);
 }
 
 .row {
@@ -29,17 +44,57 @@ img {
     width: 100%;
 }
 
+.profile-pic {
+    width: 200px;
+    height: 200px;
+
+}
+
+.profile-pic    img{
+    width: 200px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
+.primary-button {
+    display: inline;
+    background-color: white;
+    padding: 8px 12px;
+    border: 1 px solid white;
+    border-radius: 20px;
+}
+
+.primary-button > * {
+    color: black;
+}
+
+.secondary-button {
+    display: inline;
+    background-color: var(--main_color);
+    padding: 6px 12px;
+    border: 1 px solid var(--main_color);
+    border-radius: 20px;
+}
+
+.secondary-button > * {
+    color: white;
+}
+
 /*
     HEADER
 */
+header {
+    background-color: var(--main_header_color);
+    color: white;
+}
 
 header .row {
-    height: 80px;
     justify-content: space-between;
 }
 
@@ -51,12 +106,18 @@ header .container .row > * {
 
 header .menu-hamburger {
     display: none;
+    color: white;
+    font-size: 1.5rem;
 }
+
 
 header .menu-links  ul li{
     display: inline;
+    padding-left: 10px;
 }
 
+header .menu-links  ul li .primary-button {
+}
 /*
     MAIN - SECTION-1
 */
@@ -66,34 +127,86 @@ header .menu-links  ul li{
     flex-wrap: wrap;
 }
 
+#section-1 .big-card,
+#section-1 .card {
+    background-color: #B5DDFF;
+    border: 1px solid #B5DDFF;
+    border-radius: 20px;
+}
+
 #section-1 .big-card {
     width: calc((100% / 3) * 2);
+    height: 300px;
     display: flex;
     align-items: center;
+    padding-top: calc(var(--main_padding) *2);
+    padding-left: var(--main_padding);
+    padding-right: var(--main_padding);
 }
 
-#section-1 .big-card > * {
+#section-1 .big-card .info {
     width: calc(100% / 2);
+    display: flex;
+    height: inherit;
+    flex-direction: column;
 }
 
-#section-1 h4{
-    color: aqua;
+#section-1 .big-card .info > * {
+    
+    align-items: end;
+}
+
+#section-1 .big-card .image {
+    width: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+}
+
+#section-1 .big-card .image img {
+    width: 70%;
+    object-fit: cover;
+    display: block;
+    margin-top: 40px;
+    margin-left: -30px;
+}
+
+#section-1 h2 {
+    padding: 10px 0;
+}
+
+#section-1 h4 {
+    color: #0084fd;
+    padding: 10px 0;
 }
 
 
 #section-1 p {
     color: lightslategray;
+    padding: 10px 0;
 }
 
 #section-1 .card {
     width: calc((100% / 3) * 1);
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
+#section-1 .card .icon {
+    color: #0084fd;
+    font-size: 3rem;
+}
 
 /*
     MAIN - SECTION-2
 */
+
+#section-2 {
+    background-color: #9792e4;
+}
 
 #section-2 .container {
     display: flex;
@@ -104,18 +217,50 @@ header .menu-links  ul li{
     color: white;
 }
 
+#section-2 .card {
+    padding-left: 180px;
+}
+
+#section-2 .card div img{
+
+}
+
 #section-2 .end-card  {
     min-height: 300px;
     display: flex;
     align-items: flex-end;
+    padding: 40px;
 }
 
-#section-2 .end-card div > * {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#section-2 .end-card > * {
+    background-color: white;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 40px;
+    padding: 40px;
 }
 
+#section-2 .end-card h4 {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+#section-2 .end-card p {
+    font-style: italic;
+    padding: 10px 0 40px 0;
+}
+
+#section-2 .end-card .secondary-button {
+    padding: 18px 20px;
+    border-radius: 25px;
+}
+
+#section-2 .end-card .secondary-button > * {
+    color: black;
+
+}
 
 /*
     MAIN - SECTION-3
@@ -128,15 +273,36 @@ header .menu-links  ul li{
     margin: 0 auto;
 }
 
+#section-3 .container h5 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
 
-#section-3 .containe div:first-child {
+#section-3 .container h2 {
+    text-align: center;
+    color: #9792e4;
+    padding: 10px 0;
+    font-size: 36px;
+}
+
+#section-3 .container p {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+#section-3 .container div:first-child {
     display: flex;
     flex-direction: column;
-    justify-content: ;
 }
 
 #section-3 .container .card {
+    background-color: #9792e4;
+    border: 1px solid #9792e4;
+    border-radius: 40px;
     display: flex;
+    margin: 20px 0;
 }
 
 #section-3 .container .card .profile-pic {
@@ -145,13 +311,45 @@ header .menu-links  ul li{
 
 #section-3 .container .card .quote {
     width: calc((100% / 4) * 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
-
-
-#section-3 .container .card .quote div > * {
-    display: inline;
+#section-3 .container .card .quote p {
+    color: white;
+    text-align: left;
 }
+
+#section-3 .container .card .quote .name {
+    font-weight: 600;
+    font-size: 22px;
+}
+/*
+    MAIN - SECTION-4
+*/
+
+#section-4 h2 {
+    text-align: center;
+}
+
+#section-4 .table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section-4 .table .card {
+    width: calc((100% / 3) * 1);
+}
+
+#section-4 .table .card > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 /*
     RESPONSIVE
 */
@@ -160,7 +358,7 @@ header .menu-links  ul li{
 @media screen and (max-width: 768px) {
 
     header .menu-hamburger {
-        display: block;
+        display: inline;
     }
     header .menu-links {
         display: none;
@@ -175,39 +373,21 @@ header .menu-links  ul li{
     
 }
 
-
-
 /*
     DEBUG
 */
 
-.debug header {
-    background-color: blue;
-    color: white;
-}
-
-.debug #section-1 .big-card,
-.debug #section-1 .card {
-    background-color: aquamarine;
-    border: 1px solid aquamarine;
-    border-radius: 40px;
-}
-
-
 .debug #section-2 {
-    background-color: blueviolet;
+    background-color: var(--main_color);
     min-height: 300px;
 }
 
-.debug #section-2 .end-card > * {
+.debug #section-4 {
+    background-color: var(--main_color);
+}
+
+.debug #section-4 .card {
     background-color: white;
     border: 1px solid white;
     border-radius: 40px;
-}
-
-.debug #section-3 .card {
-    background-color: blueviolet;
-    border: 1px solid blueviolet;
-    border-radius: 40px;
-
 }
