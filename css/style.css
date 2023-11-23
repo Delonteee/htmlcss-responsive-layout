@@ -521,12 +521,47 @@ header .menu-links  ul li{
         display: none;
     }
 
+    .container {
+        width: 100%;
+    }
 
+    #section-1 .big-card .box {
+        height: 100%;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #section-2 .row {
+        display: block;
+    }
+
+    #section-2 .card,
+    #section-2 .end-card {
+        width: 100%;
+    }
+
+    #section-2 .card h3 {
+        font-size: 35px;
+    }
+
+    #section-2 .end-card {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #section-3 
+
+    #section-4 .table .card {
+        width: 50%;
+    }
 }
-
 
 @media screen and (max-width: 480px) {
     
+
+    #section-4 .table .card {
+        width: 100%;
+    }
     
 }
 
