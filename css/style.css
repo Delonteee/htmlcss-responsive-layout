@@ -49,7 +49,7 @@ img {
 
 }
 
-.profile-pic    img{
+.profile-pic img{
     width: 200px;
     height: 100%;
     border-radius: 50%;
@@ -363,6 +363,7 @@ header .menu-links  ul li{
     font-weight: 600;
     font-size: 22px;
 }
+
 /*
     MAIN - SECTION-4
 */
@@ -418,8 +419,94 @@ header .menu-links  ul li{
     color: white;
 }
 
+/*
+    MAIN - SECTION-5
+*/
+
+#section-5 .row {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#section-5 .about-us {
+    width: 70%;
+    padding-right: 50px;
+}
+
+#section-5 .card {
+    width: 30%;
+}
+
+#section-5 h2, #section-5 > p, #section-5 .card .img_resize, #section-5 .card > h3{
+    margin-bottom: 40px;
+}
+
+#section-5 h2{
+    font-size: 3rem;
+    color: #9792e4;
+}
+
+#section-5 p{
+    line-height: 2rem;
+}
+
+#section-5 .card .profile-pic {
+    position: relative;
+}
+
+#section-5 .card .profile-pic .fa-quote-left{
+    position: absolute;
+    font-size: 3.5rem;
+    color: #9792e4;
+    right: 0;
+    top: 0;
+}
+
+#section-5 .card > h3{
+    color: #9792e4;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-top: 20px;
+}
+
+#section-5 .card > .secondary-button{
+    color: white;
+    background-color: #9792e4;
+    padding: 10px 16px;
+}
 
 
+/*
+    MAIN - SECTION-6
+*/
+
+
+
+/*
+    FOOTER
+*/
+
+.main-footer {
+    background: #2e2e2e;
+}
+
+.main-footer  .container {
+    width: 30%;
+    padding: 30px 0;
+}
+
+
+.main-footer  .container p {
+    color: white;
+    text-align: center;
+}
+
+.main-footer  .container p > * {
+    color: #9792e4;
+    text-decoration: underline;
+}
 /*
     RESPONSIVE
 */
