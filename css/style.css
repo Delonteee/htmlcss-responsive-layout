@@ -551,6 +551,10 @@ header .menu-links  ul li{
 
     #section-3 
 
+    #section-4 .table {
+        flex-wrap: wrap;
+    }
+
     #section-4 .table .card {
         width: 50%;
     }
@@ -558,7 +562,10 @@ header .menu-links  ul li{
 
 @media screen and (max-width: 480px) {
     
-
+    #section-4 .table {
+        flex-wrap: wrap;
+    } 
+    
     #section-4 .table .card {
         width: 100%;
     }
